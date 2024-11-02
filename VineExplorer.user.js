@@ -2,15 +2,15 @@
 // @name         Amazon Vine Explorer
 // @namespace    http://tampermonkey.net/
 // @version      0.10.9.0.1
-// @updateURL    https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/VineExplorer.user.js
-// @downloadURL  https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/VineExplorer.user.js
+// @updateURL    https://raw.githubusercontent.com/PeterSkaliks/AVE/main/VineExplorer.user.js
+// @downloadURL  https://raw.githubusercontent.com/PeterSkaliks/AVE/main/VineExplorer.user.js
 // @description  Better View, Search and Explore for Amazon Vine Products - Vine Voices Edition
 // @author       MarkusSR1984, Christof121
 // @match        *://www.amazon.de/*
 // @match        *://www.amazon.com/*
 // @match        *://www.amazon.co.uk/*
 // @license      MIT
-// @icon         https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/vine_logo.png
+// @icon         https://raw.githubusercontent.com/PeterSkaliks/AVE/main/vine_logo.png
 // @run-at       document-start
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -18,9 +18,9 @@
 // @grant        GM.setValue
 // @grant        GM.xmlHttpRequest
 // @grant        unsafeWindow
-// @require      https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/globals.js
-// @require      https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/class_db_handler.js
-// @require      https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/class_product.js
+// @require      https://raw.githubusercontent.com/PeterSkaliks/AVE/main/globals.js
+// @require      https://raw.githubusercontent.com/PeterSkaliks/AVE/main/class_db_handler.js
+// @require      https://raw.githubusercontent.com/PeterSkaliks/AVE/main/class_product.js
 
 // External Source
 // @require      https://raw.githubusercontent.com/eligrey/FileSaver.js/v2.0.4/src/FileSaver.js
@@ -2422,9 +2422,9 @@ function updateNewProductsBtn() {
  *
  */
 function desktopNotifikation(title, message, image = null, requireInteraction = null, onClick = () => {}) {
-    const _vineLogo = 'https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/main/vine_logo.png';
-    const _vineLogoImp = 'https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/dev-main/vine_logo_important.png'
-    const _defaultImage = 'https://raw.githubusercontent.com/Amazon-Vine-Explorer/AmazonVineExplorer/dev-main/vine_logo_notification_image.png'
+    const _vineLogo = 'https://raw.githubusercontent.com/PeterSkaliks/AVE/main/vine_logo.png';
+    const _vineLogoImp = 'https://raw.githubusercontent.com/PeterSkaliks/AVE/dev-main/vine_logo_important.png'
+    const _defaultImage = 'https://raw.githubusercontent.com/PeterSkaliks/AVE/dev-main/vine_logo_notification_image.png'
 
     if (Notification.permission === 'granted') {
         const _notification = new Notification(title, {
